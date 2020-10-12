@@ -1,0 +1,10 @@
+<div class="container" *ngIf="!allCategoriesSelected">
+    <h1 class="text-center">Select the categories</h1>
+    <div class="grid-container">
+        <div class="grid-item" *ngFor="let category of categories | keyvalue;" [ngClass]="{'selected':isItemselected(category)}">
+            <div (click)="selectedCategory(category)">{{category.key}}</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" (click)="AllCategoriesSelected()">Continue</button>
+</div>
+<app-product-list *ngIf="allCategoriesSelected" [selectedCategories]="selectedCategories"></app-product-list>
