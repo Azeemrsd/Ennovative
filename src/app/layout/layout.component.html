@@ -1,6 +1,12 @@
-<app-header></app-header>
-<div class="row">
-    <app-sidebar></app-sidebar>
-    
-    <app-categories></app-categories>
+<div class="parent">
+
+    <app-header></app-header>
+    <div class="content-container">
+        <div class="continer fluild">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
